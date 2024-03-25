@@ -224,7 +224,12 @@
         z-index: -1
         animation: cat 3s linear infinite alternate
 
+    .btn
+        img
+            top: 0
+
     &-list
+        list-style: none
         li
             display: flex
             align-items: center
@@ -291,3 +296,84 @@
 
             img
                 width: 13.75vw
+
+.virus
+    .col
+        max-width: 60%
+
+    &-box
+        background: radial-gradient(109.47% 177.52% at -2.63% 110.29%, #FAA628 0%, #E62C28 59.37%, #A01A19 100%)
+        padding: 64px 50px 72px
+        color: white
+        border-radius: 24px
+        margin-bottom: 24px
+
+    &-out
+        padding: 30px 36px
+        gap: 32px
+        font-size: 24px
+        text-transform: uppercase
+        border-width: 5px
+        overflow: hidden
+        border-image-slice: 2
+        border-radius: 24px
+        border-style: solid
+        border-color: #FAA628
+        // border-image: linear-gradient(149.1% 106.02% at -4.12% -11.56%, #FAA628 0%, #FAA628 23.94%, #E62C28 59.94%, #A01A19 100%)
+        mark
+            font-weight: 800
+
+    .h2
+        margin-bottom: 32px
+
+    p, li
+        font-weight: 500
+        font-size: 24px
+
+    ul
+        margin-top: 20px
+        padding-left: 25px
+
+    &__img
+        max-width: 32%
+
+    @media screen and ( max-width: 1600px )
+        &-box
+            padding: 54px 40px 62px
+
+        .h2
+            margin-bottom: 22px
+
+        li, p
+            font-size: 20px
+
+        &-out
+            gap: 22px
+            border-width: 3px
+            padding: 22px 28px
+            img
+                max-width: 120px
+
+    @media screen and ( max-width: 970px )
+        .col
+            max-width: 100%
+
+        .container
+            display: block
+
+        &-box
+            padding: 10vw 7.5vw
+
+        li, p
+            font-size: 4.69vw
+
+        &-out
+            gap: 5.5vw
+            margin-bottom: 40px
+            padding: 7.2vw 5vw
+            align-items: flex-start
+            img
+                width: 20.33vw
+
+        &__img 
+            max-width: 100%
