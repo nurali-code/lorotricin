@@ -1,0 +1,138 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$red: #DC0000
+$gray: #58595B
+
+body
+    min-height: 100vh
+    font-size: 16px
+    background-color: #fff
+    color: $gray
+    font-family: 'Golca', sans-serif
+    position: relative
+    z-index: 1
+
+    &.is_active
+        overflow: hidden
+
+img
+    max-width: 100%
+
+.container
+    max-width: 1632px
+    width: 100%
+    padding: 0 16px
+    margin: 0 auto
+    position: relative
+    z-index: 1
+
+mark
+    background-color: rgba(0, 0, 0, 0)
+    color: $red
+
+ol, ul
+    list-style: none
+
+.h1
+    font-family: 'Golca Italic', sans-serif
+    margin: 0
+    font-size: 60px
+    line-height: 66px
+    font-weight: normal
+    text-transform: uppercase
+    mark
+        font-weight: 800
+
+.h2
+    display: block
+    font-size: 60px
+    line-height: 110%
+    margin: 0
+
+a,
+button
+    color: #000
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+.fx
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &_w
+        flex-wrap: wrap
+
+.btn
+    display: inline-flex
+    align-items: center
+    gap: 14px
+    padding: 18px 35px 20px
+    text-align: center
+    color: white
+    border-radius: 44px
+    background-color: $red
+
+    font-weight: 500
+    font-size: 20px
+    line-height: 23px
+    &:active
+
+    &__outline
+        background-color: transparent
+        border: 2px solid white
+        padding: 11px 30px 12px
+        &:hover
+            background-color: #fff
+            color: $red
+
+    img
+        display: block
+        position: relative
+        top: 2px
+
+section
+    padding: 70px 0
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+@media screen and ( max-width: 1600px )
+    .container
+        max-width: 1280px
+
+    .h1
+        font-size: 50px
+        line-height: 55px
+
+    .h2
+        font-size: 46px
+
+    .btn
+        font-size: 18px
+        &__outline
+            border-width: 1px
+            padding: 10px 30px 11px
+
+@media screen and ( max-width: 970px )
+    .h1
+        font-size: 26px
+        line-height: 28.6px
+
+    .btn
+        padding: 3.13vw 5.32vw 3.43vw
+        font-size: 4.07vw
+        line-height: 120%
+        gap: 1.88vw
+        img
+            max-width: 2vw
+
+    .h2 
+        font-size: 7.5vw

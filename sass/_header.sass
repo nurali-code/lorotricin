@@ -1,0 +1,136 @@
+.header
+    width: 100%
+    padding: 15px 0
+    width: 100%
+    z-index: 1111
+    transition: all ease .3s
+    background: linear-gradient(270.1deg, #A01A19 0.49%, #ED3427 50.26%, #F78E28 100.03%)
+
+    .logo
+        max-width: 276px
+        position: relative
+        top: 2px
+        img
+            display: block
+
+    .nav
+        margin: 0 0 0 15px
+        width: 100%
+        justify-content: flex-end
+        &__link
+            padding: 11px 25px 12px
+            font-size: 20px
+            border-radius: 44px
+            font-weight: 500
+            color: white
+
+            &.is_active, &:hover
+                color: $red
+                background-color: #fff
+                img
+                    filter: invert(1)
+
+        &__search
+            padding: 9px 25px 11px
+
+        img
+            transition: filter ease .3s
+            display: block
+
+    .btn
+        &_menu
+            display: none
+
+        &__outline
+            margin-left: 26px
+
+    @media screen and ( max-width: 1600px )
+        .logo
+            max-width: 200px
+
+        .nav
+            &__link
+                font-size: 17px
+                padding: 9px 15px 11px
+
+            &__search
+                img
+                    max-width: 20px
+
+        .btn
+
+            margin-left: 15px
+
+    @media screen and ( max-width: 1220px )
+        padding: 1px 0
+        .logo
+            max-width: 142px
+
+        .btn_menu
+            display: inline-block
+            z-index: 9999
+            width: 38px
+            height: 38px
+            position: relative
+            z-index: 99999
+            span
+                pointer-events: none
+                display: block
+                width: 24px
+                margin: 0 0 0 auto
+                height: 2px
+                background: #fff
+                position: relative
+                z-index: 1
+                transition: all ease .3s
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+                    width: 30px
+                    height: 2px
+                    background-color: #fff
+                    position: absolute
+                    right: 0
+                    top: -8px
+                    transition: all ease .3s
+
+                &::after
+                    width: 15px
+                    top: 8px
+
+            &.is_active
+                span
+                    background-color: rgba(white, 0)
+                    &::before
+                        top: 0
+                        transform: rotate(45deg)
+                        background-color: white
+
+                    &::after
+                        top: 0
+                        transform: rotate(-45deg)
+                        background-color: white
+
+        .nav
+            background-color: rgba(#1A1A1A, .98)
+            position: fixed
+            margin: 0
+            top: 0
+            left: 0
+            width: 100%
+            display: block
+            padding: 74px 0 22px
+            transform: translateY(-50px)
+            opacity: 0
+            visibility: hidden
+            transition: all ease .3s
+            &.is_active
+                transform: translateY(0px)
+                opacity: 1
+                visibility: visible
+
+            &__link
+                color: white
+                display: block
+                padding: 10px 20px

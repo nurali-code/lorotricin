@@ -1,0 +1,293 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+@import 'slick'
+@import 'header'
+
+.main
+    background-image: url('../img/curve.svg'), url('../img/main-bg.svg')
+    background-repeat: no-repeat
+    background-position: center bottom, center center
+    background-size: contain, cover
+    align-items: flex-start
+    overflow: hidden
+
+    .h1
+        max-width: 991px
+
+    &__text
+        font-size: 36px
+        line-height: 46.8px
+        font-weight: 500
+        max-width: 681px
+        margin: 64px 0
+
+    &-slide
+        overflow: hidden
+        .container
+            min-height: 600px
+            height: calc( 100vh - 80px )
+            padding-top: 72px
+            max-height: 790px
+
+    .slick
+        &-active
+            opacity: 1
+
+    &__woman
+        position: absolute
+        z-index: 1
+        bottom: 0
+        right: 2%
+        max-width: 40%
+        max-height: 95%
+        object-fit: contain
+        object-position: center bottom
+
+    &-wrap
+        max-width: 54%
+        margin: 21px 3% 0 auto
+
+    &__box
+        position: absolute
+        bottom: 0%
+        left: -5%
+        max-height: 65%
+        object-fit: contain
+        object-position: center bottom
+        max-width: 50%
+
+    &-item
+        display: block
+        max-width: 32%
+        text-align: center
+
+        &__img
+            display: block
+            margin: 0 auto 16px
+            max-width: 126px
+            height: 129px
+            object-fit: contain
+            object-position: center center
+
+        &__title
+            font-weight: 700
+            font-size: 28px
+            line-height: 36.4px
+
+    @media screen and ( max-width: 1600px )
+        .h1
+            max-width: 67%
+
+        &__text
+            font-size: 26px
+            max-width: 500px
+            line-height: 36px
+            margin: 34px 0 44px
+
+        &-slide
+            .container
+                padding-top: 56px
+                height: calc( 100vh - 76px )
+
+        &-wrap
+            max-width: 50%
+
+        &-item
+            &__img
+                max-width: 100px
+                height: 100px
+                margin-bottom: 12px
+
+            &__title
+                font-size: 20px
+                line-height: 26px
+
+    @media screen and ( max-width: 1220px )
+        &-slide
+            .container
+                max-height: unset
+                height: unset
+                min-height: 600px
+
+        .h1
+            max-width: 833px
+
+        &-wrap
+            margin: 4% 0 0 auto
+            max-width: 54%
+
+        &-item
+            max-width: 33%
+            &__img
+                width: 80px
+                height: 80px
+
+            &__title
+                font-size: 17px
+                line-height: 22px
+
+    @media screen and ( max-width: 970px )
+        background-size: 1370px auto, cover
+        background-position: left -335px bottom -54px, center center
+        &-slide
+            .container
+                padding-top: 32px
+                padding-bottom: 60.933vw
+                min-height: unset
+
+            &.--first .container
+                padding-bottom: 88vw
+
+        .h1
+            max-width: 94%
+            font-size: 8vw
+            line-height: 9vw
+
+        &__text
+            margin: 6.3vw 0
+            font-size: 4vw
+            line-height: 4.5vw
+            max-width: 50%
+            span
+                display: block
+                margin-top: 10px
+
+        &__woman
+            max-width: 98vw
+            right: -15vw
+            max-height: 113vw
+            z-index: -1
+
+        &-wrap
+            display: block
+            max-width: 100%
+            margin: 0.625vw auto 0
+            width: 79vw
+
+        &-item
+            max-width: 100%
+            display: flex
+            align-items: center
+            text-align: left
+            gap: 6.3vw
+            margin: 4.4vw auto
+
+            &__img
+                margin: 0
+                width: 19.5vw
+                height: 19.5vw
+
+            &__title
+                font-size: 5vw
+                line-height: 120%
+
+        &__box
+            width: 90.63vw
+            height: 70vw
+            max-width: unset
+            z-index: -1
+            left: -10%
+
+@keyframes cat
+    0%
+        transform: translateY(-10%)
+    100%
+        transform: translateY(10%)
+
+.cats
+    padding: 120px 0 18vw
+    position: relative
+    z-index: 1
+    background-image: url('../img/cats_bg.png')
+    min-height: 100vh
+    overflow: hidden
+    &__img
+        display: block
+        width: 100%
+        position: absolute
+        z-index: 1
+        bottom: 0
+        left: 0
+        pointer-events: none
+
+    .h2
+        color: $red
+        margin-bottom: 80px
+
+    &__cat
+        position: absolute
+        bottom: 14%
+        max-width: 15vw
+        left: 55%
+        display: block
+        z-index: -1
+        animation: cat 3s linear infinite alternate
+
+    &-list
+        li
+            display: flex
+            align-items: center
+            gap: 23px
+            font-size: 28px
+            line-height: 110%
+            color: $red
+            margin-bottom: 27px
+            &:last-child
+                margin-bottom: 0
+
+    @media screen and ( max-width: 1600px )
+        padding: 80px 0 20vw
+
+        .h2
+            margin-bottom: 55px
+
+        &__cat
+            bottom: 12%
+
+        &-list
+            li
+                font-size: 22px
+                gap: 16px
+                margin-bottom: 20px
+            img
+                width: 80px
+
+    @media screen and ( max-width: 970px )
+        padding-top: 11.6vw
+        padding-bottom: 100vw
+        min-height: unset
+        .h2
+            margin-bottom: 9.4vw
+
+        &__img
+            width: 300vw
+            max-width: unset
+            max-height: 60%
+            bottom: -25vw
+            object-fit: contain
+            object-position: center top
+            left: 60%
+            transform: translateX(-50%)
+
+        &__cat
+            max-width: 41vw
+            left: auto
+            bottom: 2%
+            right: 2vw
+
+        .fx
+            display: block
+            text-align: center
+
+        &-list
+            text-align: left
+            margin-bottom: 9.4vw
+            li
+                gap: 3.5vw
+                font-size: 5vw
+                max-width: 59.4vw
+                margin: 0 auto 2.5vw
+
+            img
+                width: 13.75vw
