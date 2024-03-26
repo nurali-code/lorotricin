@@ -375,5 +375,131 @@
             img
                 width: 20.33vw
 
-        &__img 
+        &__img
             max-width: 100%
+
+.solution
+    overflow: hidden
+
+    &__heading
+        color: $red
+        margin-bottom: 83px
+        img
+            display: block
+            margin-top: 17px
+
+    &__img
+        position: absolute
+        right: -5%
+        bottom: 89%
+
+    &-wrap
+        position: relative
+        z-index: 1
+        border-radius: 24px
+        color: white
+        padding: 138px 110px 90px
+        background: radial-gradient(109.47% 177.52% at -2.63% 110.29%, #FAA628 0%, #E62C28 59.37%, #A01A19 100%)
+        text-align: center
+        .h2
+            margin-bottom: 64px
+
+    &-items
+        margin-bottom: 60px
+
+    &-item
+        width: 356px
+        aspect-ratio: 10/11.517
+        // min-height: 410px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 13px
+        background-image: url('../img/hexagon.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        filter: drop-shadow(13.875px 13.875px 38.15625px rgba(0, 0, 0, 0.12))
+        color: $gray
+
+        &__title
+            font-weight: 700
+            line-height: 110%
+            font-size: 28px
+            display: block
+
+        sup
+            font-weight: 500
+
+    &-for
+        display: block
+        width: 356px
+
+    @media screen and ( max-width: 1600px )
+        &__heading
+            max-width: 65%
+            margin-bottom: 50px
+
+        &__img
+            max-width: 33%
+            right: -7%
+            bottom: 92%
+
+        &-wrap
+            padding: 80px 70px
+            .h2
+                margin-bottom: 44px
+
+        &-item
+            width: 300px
+            max-width: 30%
+            padding: 20px
+            gap: 8px
+
+            &__img
+                width: 90px
+
+            &__title
+                font-size: 20px
+
+    @media screen and ( max-width: 1600px )
+        padding-top: 0
+        &__heading
+            max-width: 100%
+            margin-bottom: 37.5vw
+
+        &-wrap
+            padding: 37.5vw 8vw
+
+        &__img
+            right: -11vw
+            max-width: 90vw
+            bottom: 93.5%
+
+        .fx
+            display: block
+
+        &-item
+            max-width: 100%
+            width: 90vw
+            gap: 1vw
+            margin-bottom: 2.5vw
+            &:last-child
+                margin-bottom: 0
+
+            &__img
+                width: 20.94vw
+
+            &__title
+                font-size: 5.64vw
+
+        &-for
+            width: 100%
+            margin-bottom: 9.063vw
+            &:last-child
+                margin-bottom: 0
+
+            &__img
+                display: block
+                margin: 0 auto

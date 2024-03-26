@@ -1,5 +1,7 @@
 .header
     width: 100%
+    position: relative
+    z-index: 99999
     padding: 15px 0
     width: 100%
     z-index: 1111
@@ -101,36 +103,52 @@
 
             &.is_active
                 span
+                    width: 28px
                     background-color: rgba(white, 0)
-                    &::before
+                    &::before,
+                    &::after
+                        width: 100%
+                        left: 0
                         top: 0
-                        transform: rotate(45deg)
                         background-color: white
+
+                    &::before
+                        transform: rotate(45deg)
 
                     &::after
-                        top: 0
                         transform: rotate(-45deg)
-                        background-color: white
 
         .nav
-            background-color: rgba(#1A1A1A, .98)
+            background-color: rgba(#fff, 1)
+            min-height: calc( 100vh - 40px )
             position: fixed
+            z-index: 999
             margin: 0
-            top: 0
+            top: 40px
             left: 0
             width: 100%
             display: block
-            padding: 74px 0 22px
-            transform: translateY(-50px)
+            padding: 19px 0 22px
+            transform: translateY(50px)
             opacity: 0
             visibility: hidden
             transition: all ease .3s
+
+            background-size: 1370px auto
+            background-position: left -335px bottom -54px
+            background-image: url(../img/curve.svg)
+            background-repeat: no-repeat
             &.is_active
                 transform: translateY(0px)
                 opacity: 1
                 visibility: visible
 
             &__link
-                color: white
+                font-size: 18px
+                line-height: 110%
+                color: $gray
                 display: block
-                padding: 10px 20px
+                padding: 13px 16px
+
+            &__search, .btn
+                display: none
