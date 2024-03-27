@@ -704,20 +704,74 @@
 
     @media screen and ( max-width: 970px )
         padding: 50px 0
-        .h2 
+        .h2
             margin-bottom: 10vw
-        .fx 
+        .fx
             display: block
 
-        &-item 
+        &-item
             width: 100%
             max-width: 100%
             margin-bottom: 4.38vw
-            &__icon 
+            &__icon
                 width: 40.63vw
 
-            &__heading 
+            &__heading
                 font-size: 5.64vw
-    
 
-    
+.cases
+    padding-top: 100px
+    &-box
+        border-radius: 24px
+        padding: 78px 135px
+        background: radial-gradient(109.47% 177.52% at -2.63% 110.29%, #FAA628 0%, #E62C28 59.37%, #A01A19 100%)
+
+    &-wrap
+        background-color: #fff
+        border-radius: 24px
+        padding: 120px 135px
+        .fx
+            align-items: flex-start
+
+    &__text
+        margin-bottom: 65px
+        font-size: 24px
+
+    .h2
+        text-align: center
+        margin-bottom: 32px
+        color: white
+        span
+            text-transform: uppercase
+            display: block
+
+    &__textline
+        max-width: 1064.91px
+        margin: 0 auto 72px
+        font-size: 28px
+        font-weight: 800
+        color: white
+        text-align: center
+.tab
+    display: none
+    &.is_active
+        display: block
+
+    &-content
+        max-width: 660px
+
+    &-btns
+        max-width: 290px
+
+    &__btn
+        width: 100%
+        border-radius: 80px
+        padding: 12px 30px 14px
+        margin-bottom: 56px
+        font-size: 28px
+        font-weight: 500
+        background-color: rgba(236, 236, 236, 1)
+        box-shadow: 9.250000953674316px 9.250000953674316px 20.812501907348633px 0px rgba(0, 0, 0, 0.12)
+        &.is_active
+            color: white
+            background-color: $red
