@@ -520,3 +520,204 @@
             margin-top: 30px
             img
                 max-width: 3.5vw
+
+.pills
+    overflow: hidden
+    .h2
+        margin-bottom: 79px
+        img
+            margin: 20px 0 10px
+            display: block
+            max-width: 90%
+
+    &-wrap
+        max-width: 1100px
+        margin: 0 auto
+        position: relative
+        left: -4%
+        z-index: 1
+
+    &__o
+        position: absolute
+        top: 0
+        left: 97%
+        z-index: -1
+
+    &__a
+        bottom: 10%
+        position: absolute
+        right: 84%
+        z-index: -1
+
+    &__pill
+        position: absolute
+        // max-width: 10vw
+        top: 50%
+        left: 50%
+        transform: translate(-16%, -50%)
+        z-index: 11
+        border-radius: 50%
+        box-shadow: 11px 11px 11px 0px rgba(74, 74, 74, 0.25)
+
+    &-item
+        width: 616px
+        max-width: 56%
+        aspect-ratio: 10/8.7
+        text-align: center
+        padding: 10px
+
+        background-image: url('../img/pills-bg.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        margin-left: auto
+        margin-bottom: 30px
+        filter: drop-shadow(13.875px 13.875px 38.15625px rgba(0, 0, 0, 0.12))
+
+        @media screen and ( min-width: 970px )
+            &:nth-child(2)
+                margin: 0 auto 0 0
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+
+        &:last-child
+            margin-bottom: 0
+
+        &__img
+            width: 128px
+
+        &__heading
+            border-radius: 40px
+            margin: 18px 0
+            font-weight: 800
+            font-size: 28px
+            display: inline-block
+            padding: 14px 32px 17px
+            color: white
+            background-color: $red
+            border: 2px solid rgba(255, 255, 255, 1)
+
+        &__text
+            color: white
+            font-size: 24px
+            max-width: 400px
+            font-weight: 500
+
+    @media screen and ( max-width: 1600px )
+        &-wrap
+            left: -3%
+            max-width: 900px
+
+        &__o
+            top: 17%
+            left: auto
+            right: -22%
+
+        &-item
+            &__icon
+                width: 110px
+
+            &__heading
+                font-size: 24px
+
+            &__text
+                font-size: 20px
+                max-width: 330px
+
+        &__a
+            right: 67%
+
+    @media screen and ( max-width: 1300px )
+        &-wrap
+            left: 0
+
+    @media screen and ( max-width: 970px )
+        padding: 50px 0 20px
+        .container
+            padding: 0 4px
+
+        .h2
+            padding: 0 12px
+            margin-bottom: 12.5vw
+            img
+                max-width: 100%
+                margin: 3vw 0 2vw
+
+        &-item
+            max-width: 100%
+            &__icon
+                width: 20.94vw
+
+            &__heading
+                font-size: 5.64vw
+                padding: 3.44vw 4vw 3.4vw
+                border-radius: 20vw
+                margin: 4vw 0
+
+            &__text
+                max-width: 69%
+                font-size: 4.7vw
+
+        &__pill
+            display: none
+
+        &__o
+            width: 74vw
+            top: 25%
+            right: -40%
+
+        &__a
+            width: 74vw
+            right: 54%
+            bottom: 22%
+
+.safe
+    padding: 100px 0
+    .h2
+        color: $red
+        margin-bottom: 70px
+
+    &-item
+        text-align: center
+        max-width: 25%
+        &__icon
+            width: 256px
+            filter: drop-shadow(13.875px 13.875px 38.15625px rgba(0, 0, 0, 0.12))
+
+        &__heading
+            font-size: 28px
+            font-weight: 800
+            display: block
+
+    @media screen and ( max-width: 1600px )
+        &-item
+            &__icon
+                width: 190px
+            &__heading
+                font-size: 23px
+
+    @media screen and ( max-width: 970px )
+        padding: 50px 0
+        .h2 
+            margin-bottom: 10vw
+        .fx 
+            display: block
+
+        &-item 
+            width: 100%
+            max-width: 100%
+            margin-bottom: 4.38vw
+            &__icon 
+                width: 40.63vw
+
+            &__heading 
+                font-size: 5.64vw
+    
+
+    
