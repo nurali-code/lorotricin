@@ -721,6 +721,7 @@
 
 .cases
     padding-top: 100px
+    margin-bottom: 100px
     &-box
         border-radius: 24px
         padding: 78px 135px
@@ -780,6 +781,7 @@
         margin-bottom: 48px
 
     @media screen and ( max-width: 1600px )
+        margin-bottom: 70px
         .h2
             margin-bottom: 20px
 
@@ -824,7 +826,7 @@
 
         &-box, &-wrap
             padding: 15vw 5vw 7vw
-         
+
         &-wrap
             padding: 14vw 5vw 70vw
             position: relative
@@ -853,7 +855,7 @@
 
             &__text
                 font-size: 5.625vw
-                i, mark 
+                i, mark
                     font-size: 5vw
 
         &__subheading
@@ -866,7 +868,6 @@
                 left: 50%
                 transform: translateX(-50%)
                 width: 65vw
-
 
 .tab
     display: none
@@ -917,3 +918,68 @@
 
         &-content
             max-width: 100%
+
+.news
+    padding: 100px 0
+    .h2
+        margin-bottom: 74px
+
+    &-item
+        width: 31%
+        max-width: 440px
+        position: relative
+        z-index: 1
+        &__img
+            display: block
+            width: 100%
+            aspect-ratio: 4/5 
+            object-fit: cover
+            margin: 0 0 30px
+
+        &__heading
+            font-size: 28px
+            line-height: 110%
+
+        &__link 
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 111
+
+        &:hover
+            .news-item__heading
+                text-decoration: underline
+            
+
+    @media screen and ( max-width: 1600px )
+        padding: 70px 0
+        .h2
+            margin-bottom: 54px
+
+        &-item
+
+            &__img
+                margin: 0 0 20px
+
+            &__heading
+                font-size: 24px
+
+    @media screen and ( max-width: 970px )
+        padding: 50px 0
+        .fx 
+            display: block
+
+        &-item 
+            width: 100%
+            display: flex
+            flex-direction: column-reverse
+            margin-bottom: 7.5vw
+            &__heading 
+                font-size: 5.625vw
+                margin-bottom: 2.5vw
+            &__img 
+                aspect-ratio: 6/4
+                margin: 0
