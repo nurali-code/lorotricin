@@ -2,26 +2,65 @@
     padding: 100px 0 0
     &__textline
         font-size: 16px
+
     &-wrap
         background: radial-gradient(109.47% 177.52% at -2.63% 110.29%, #FAA628 0%, #E62C28 59.37%, #A01A19 100%)
         color: white
         padding: 62px 0 47px
-        .container 
+        .container
             align-items: flex-end
 
-    a 
+    a
         color: #fff
 
     &__descr
         text-align: center
         font-size: 31px
-        padding: 15px 0
+        padding: 15px
         font-weight: 300
         text-transform: uppercase
 
-    &__logo 
+    &__logo
         margin-bottom: 50px
         display: block
 
-    .col 
-        max-width: 316px
+    .col
+        font-size: 22px
+        max-width: 400px
+
+    @media screen and ( max-width: 1600px )
+        padding-top: 70px
+        &__textline
+            font-size: 14px
+
+        &__descr
+            max-width: 90%
+            margin: 0 auto
+            font-size: 24px
+
+        .col
+            font-size: 20px
+
+    @media screen and ( max-width: 970px )
+        &-wrap
+            padding: 30px 0 10px
+            .fx
+                display: block
+
+        &__logo
+            max-width: 45vw
+        
+
+        &__textline
+            font-size: 4.07vw
+
+        .col
+            font-size: 4.07vw
+            width: 100%
+            max-width: 100%
+            margin-bottom: 4.07vw
+
+        &__descr 
+            font-size: 4vw
+            padding: 3vw
+            max-width: 100%
