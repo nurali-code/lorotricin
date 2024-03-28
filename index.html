@@ -130,7 +130,6 @@
                     </p>
                 </div>
                 <img src="img/virus.svg" class="virus__img" alt="im" loading="lazy">
-
             </div>
         </section>
 
@@ -258,20 +257,23 @@
                     В каких случаях применять
                     <span>Лоротрицин<sup>®</sup>-Алиум?</span>
                 </h2>
-                <p class="cases__textline">Симптоматическое лечение инфекционно-воспалительных заболеваний полости рта и
-                    горла, сопровождающихся болевым синдромом:</p>
+
+                <p class="cases__textline">
+                    Симптоматическое лечение инфекционно-воспалительных заболеваний полости рта и
+                    горла, сопровождающихся болевым синдромом:
+                </p>
 
                 <div class="cases-wrap">
-                    <div class="fx">
+                    <div class="fx cases-tabs">
                         <div class="col tab-btns">
-                            <button class="tab__btn is_active">Фарингит</button>
-                            <button class="tab__btn">Ларингит</button>
-                            <button class="tab__btn">Тонзиллит</button>
-                            <button class="tab__btn">Гингивит</button>
-                            <button class="tab__btn">Стоматит</button>
+                            <button data-filter="1" class="tab__btn is_active">Фарингит</button>
+                            <button data-filter="2" class="tab__btn">Ларингит</button>
+                            <button data-filter="3" class="tab__btn">Тонзиллит</button>
+                            <button data-filter="4" class="tab__btn">Гингивит</button>
+                            <button data-filter="5" class="tab__btn">Стоматит</button>
                         </div>
                         <div class="tab-content">
-                            <div class="tab is_active">
+                            <div data-content="1" class="tab is_active">
                                 <p class="cases__text">
                                     <b>Фарингит</b> - острое воспаление слизистой оболочки рта и глотки, причина
                                     которого –
@@ -282,7 +284,7 @@
                                 </p>
                                 <img src="img/tab-1.svg" alt="tb">
                             </div>
-                            <div class="tab">
+                            <div data-content="2" class="tab">
                                 <p class="cases__text">
                                     <b>Ларингит</b> – это воспаление слизистой оболочки гортани и голосовых связок,
                                     причина которой чаще всего - развивающаяся инфекция. В результате появляется
@@ -292,7 +294,7 @@
                                 </p>
                                 <img src="img/tab-2.svg" alt="tb">
                             </div>
-                            <div class="tab">
+                            <div data-content="3" class="tab">
                                 <p class="cases__text">
                                     <b>Тонзиллит</b> – это инфекционное заболевание, которое поражает слизистую оболочку
                                     миндалин. Часто его называют ангиной. Воспаленные миндалины покрываются гнойными
@@ -302,7 +304,7 @@
                                 </p>
                                 <img src="img/tab-3.svg" alt="tb">
                             </div>
-                            <div class="tab">
+                            <div data-content="4" class="tab">
                                 <p class="cases__text">
                                     <b>Гингивит</b> – это воспаление десен, которое чаще всего возникает в
                                     результате развития инфекции. Появляется покраснение и отечность десен, они легко
@@ -311,17 +313,47 @@
                                 </p>
                                 <img src="img/tab-4.svg" alt="tb">
                             </div>
-                            <div class="tab">
+                            <div data-content="5" class="tab">
                                 <p class="cases__text">
-                                    <b>Стоматит</b> - заболевание слизистой оболочки полости ртакоторая может возникать на десне, языке, слизистой щек и губ и т.д. Обычно он проявляется болезненными ощущениями и белым или желтым налетом. Могут возникать одна или несколько болезненных язв, сопровождающихся повышением температуры до 37,5°С, увеличением шейных лимфоузлов, слабостью и головной болью.
+                                    <b>Стоматит</b> - заболевание слизистой оболочки полости ртакоторая может возникать
+                                    на десне, языке, слизистой щек и губ и т.д. Обычно он проявляется болезненными
+                                    ощущениями и белым или желтым налетом. Могут возникать одна или несколько
+                                    болезненных язв, сопровождающихся повышением температуры до 37,5°С, увеличением
+                                    шейных лимфоузлов, слабостью и головной болью.
+                                </p>
                                 <img src="img/tab-5.svg" alt="tb">
                             </div>
                         </div>
                     </div>
+
+                    <p class="cases__subheading">Схема приема:<sup>1</sup></p>
+
+                    <div class="fx cases-reception">
+                        <img src="img/pack.png" class="cases-reception__img" loading="lazy" alt="img">
+
+                        <div class="cases-item">
+                            <img src="img/pill-2.svg" class="cases-item__img" alt="pill">
+                            <span class="cases-item__text">
+                                1 таблетка <br>
+                                каждые 3 часа <br>
+                                <mark>Максимальная суточная <br> доза - 6 таблеток</mark>
+                            </span>
+                        </div>
+
+                        <div class="cases-item">
+                            <img src="img/calendar.svg" class="cases-item__img" alt="pill">
+                            <span class="cases-item__text">
+                                Курс лечения – 7 дней <br>
+                                <i>(курс терапии может быть увеличен по рекомендации врача)</i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <a href="#" class="btn solution__btn"><img src="img/doc.svg" alt="im"> Инструкция</a>
+                    </div>
                 </div>
             </div>
         </section>
-
     </div>
 
 

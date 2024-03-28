@@ -504,7 +504,7 @@
                 width: 20.94vw
 
             &__title
-                font-size: 5.64vw
+                font-size: 5.625vw
 
         &-for
             width: 100%
@@ -655,7 +655,7 @@
                 width: 20.94vw
 
             &__heading
-                font-size: 5.64vw
+                font-size: 5.625vw
                 padding: 3.44vw 4vw 3.4vw
                 border-radius: 20vw
                 margin: 4vw 0
@@ -717,7 +717,7 @@
                 width: 40.63vw
 
             &__heading
-                font-size: 5.64vw
+                font-size: 5.625vw
 
 .cases
     padding-top: 100px
@@ -752,6 +752,122 @@
         font-weight: 800
         color: white
         text-align: center
+
+    &__subheading
+        font-size: 28px
+        font-weight: 800
+        margin: 0 0 40px
+
+    &-item
+        max-width: 333px
+        &:first-of-type
+            margin: 0 auto
+            max-width: unset
+        &__img
+            display: block
+            max-height: 76px
+            margin-bottom: 26px
+
+        &__text
+            font-size: 28px
+            line-height: 110%
+            font-weight: 500
+            i, mark
+                font-style: normal
+                font-size: 24px
+
+    &-tabs
+        margin-bottom: 48px
+
+    @media screen and ( max-width: 1600px )
+        .h2
+            margin-bottom: 20px
+
+        &-box,
+        &-wrap
+            padding: 60px 70px
+
+        &__textline
+            margin-bottom: 60px
+
+        &__text
+            font-size: 20px
+            margin-bottom: 45px
+
+        &-reception
+            &__img
+                width: 30%
+                max-width: 300px
+
+        &__subheading
+            font-size: 24px
+            margin-bottom: 20px
+
+        &-tabs
+            margin-bottom: 30px
+
+        &-item
+            max-width: 30%
+            &__text
+                font-size: 20px
+                i, mark
+                    font-size: 18px
+
+            &__img
+                max-height: 57px
+
+    @media screen and ( max-width: 970px )
+        padding: 15.625vw 0
+
+        &-box
+            border-radius: 16px
+
+        &-box, &-wrap
+            padding: 15vw 5vw 7vw
+         
+        &-wrap
+            padding: 14vw 5vw 70vw
+            position: relative
+            z-index: 1
+
+            .fx
+                display: block
+
+        .h2
+            margin-bottom: 3.3vw
+
+        &__textline
+            font-size: 5.625vw
+
+        &__text
+            font-size: 4.69vw
+            margin-bottom: 13.14vw
+
+        &-item
+            max-width: 100%
+            width: 100%
+            margin-bottom: 6.25vw !important
+            &__img
+                max-width: 23.75vw
+                margin-bottom: 3.125vw
+
+            &__text
+                font-size: 5.625vw
+                i, mark 
+                    font-size: 5vw
+
+        &__subheading
+            font-size: 5.625vw
+
+        &-reception
+            &__img
+                position: absolute
+                bottom: 12vw
+                left: 50%
+                transform: translateX(-50%)
+                width: 65vw
+
+
 .tab
     display: none
     &.is_active
@@ -775,3 +891,29 @@
         &.is_active
             color: white
             background-color: $red
+
+    @media screen and ( max-width: 1600px )
+        &-btns
+            max-width: 220px
+
+        &-content
+            max-width: calc( 100% - 220px )
+
+        &__btn
+            font-size: 22px
+            margin-bottom: 36px
+
+    @media screen and ( max-width: 970px )
+        &-btns
+            max-width: 80%
+            margin: 0 auto 10vw
+
+        &__btn
+            font-size: 5.625vw
+            padding: 3vw 3vw 3.8vw
+            margin-bottom: 4vw
+            box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.12)
+            background: rgba(236, 236, 236, 1)
+
+        &-content
+            max-width: 100%
