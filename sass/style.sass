@@ -201,15 +201,20 @@
     position: relative
     z-index: 1
     background-image: url('../img/cats_bg.png')
-    min-height: 100vh
+    max-height: 1080px
     overflow: hidden
     &__img
         display: block
         width: 100%
         position: absolute
+        max-width: 1920px
+        max-height: 78%
+        object-fit: contain
+        object-position: center bottom
         z-index: 1
         bottom: 0
-        left: 0
+        left: 50%
+        transform: translateX(-50%)
         pointer-events: none
 
     .h2
@@ -899,7 +904,7 @@
             max-width: 220px
 
         &-content
-            max-width: calc( 100% - 220px )
+            max-width: calc( 100% - 300px )
 
         &__btn
             font-size: 22px
