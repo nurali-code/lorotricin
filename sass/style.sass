@@ -5,7 +5,6 @@
 @import 'header'
 @import 'footer'
 
-
 .main
     background-image: url('../img/curve.svg'), url('../img/main-bg.svg')
     background-repeat: no-repeat
@@ -934,7 +933,7 @@
         &__img
             display: block
             width: 100%
-            aspect-ratio: 4/5 
+            aspect-ratio: 4/5
             object-fit: cover
             margin: 0 0 30px
 
@@ -942,7 +941,7 @@
             font-size: 28px
             line-height: 110%
 
-        &__link 
+        &__link
             display: block
             position: absolute
             top: 0
@@ -954,7 +953,10 @@
         &:hover
             .news-item__heading
                 text-decoration: underline
-       
+
+    &__btn
+        margin-top: 40px
+
     @media screen and ( max-width: 1600px )
         padding: 70px 0
         .h2
@@ -970,23 +972,24 @@
 
     @media screen and ( max-width: 970px )
         padding: 50px 0
-        .fx 
+        .fx
             display: block
 
-        &-item 
+        &-item
             width: 100%
             max-width: 100%
             display: flex
             flex-direction: column-reverse
             margin-bottom: 7.5vw
-            &__heading 
+            &__heading
                 font-size: 5.625vw
                 margin-bottom: 2.5vw
-            
-            &__img 
+
+            &__img
                 aspect-ratio: 6/4
                 margin: 0
 
-        &__btn 
-            img 
+        &__btn
+            margin-top: 0
+            img
                 max-width: 5.5vw
