@@ -641,10 +641,10 @@
 
     &__pill
         position: absolute
-        // max-width: 10vw
+        max-width: 11vw
         top: 50%
         left: 50%
-        transform: translate(-16%, -50%)
+        transform: translate(-11%, -50%)
         z-index: 11
         border-radius: 50%
         box-shadow: 11px 11px 11px 0px rgba(74, 74, 74, 0.25)
@@ -671,10 +671,11 @@
 
         @media screen and ( min-width: 970px )
             &:nth-child(2)
-                margin: 0 auto 0 0
+                margin: -267px auto 0 0
                 position: absolute
                 top: 50%
-                transform: translateY(-50%)
+                @media screen and ( max-width: 1600px )
+                    margin: -230px auto 0 0
 
         &:last-child
             margin-bottom: 0
@@ -740,6 +741,7 @@
                 margin: 3vw 0 2vw
 
         &-item
+            width: 100%
             max-width: 100%
             &__icon
                 width: 20.94vw
