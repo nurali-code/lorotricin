@@ -270,6 +270,16 @@
         z-index: -1
         animation: cat 3s linear infinite alternate
 
+    .radar2
+        width: 110px
+        height: 110px
+        position: absolute
+        transform: scale(2.9)
+        bottom: 48%
+        // top: 50%
+        left: 37%
+        z-index: -1
+
     .btn
         margin-right: 4%
         img
@@ -307,10 +317,22 @@
                 height: 80px
                 width: 80px
 
+        .radar2
+            transform: scale(2.7)
+            bottom: 43%
+            left: 36%
+
+    @media screen and ( max-width: 1240px )
+        .radar2
+            transform: scale(2.4)
+            bottom: 35%
+            left: 36%
+
     @media screen and ( max-width: 970px )
         padding-top: 11.6vw
         padding-bottom: 100vw
         min-height: unset
+        max-height: unset
         .h2
             margin-bottom: 9.4vw
 
@@ -327,8 +349,14 @@
         &__cat
             max-width: 41vw
             left: auto
-            bottom: 2%
+            bottom: -6vw
             right: 2vw
+
+        @keyframes cat
+            0%
+                transform: translateY(-15vw)
+            100%
+                transform: translateY(10vw)
 
         .fx
             display: block
@@ -344,8 +372,15 @@
                 margin: 0 auto 2.5vw
 
             .radar
-                width: 13.75vw
-                height: 13.75vw
+                width: 14vw
+                height: 14vw
+
+        .radar2
+            transform: scale(1.8)
+            width: 30vw
+            height: 30vw
+            bottom: 39vw
+            left: 16%
 
 .virus
     .col
