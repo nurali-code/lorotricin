@@ -1,4 +1,7 @@
-
+AOS.init({
+    duration: 600,
+    offset: 300,
+});
 $('.btn_menu').on('click', function () {
     $('.nav, .btn_menu, body').toggleClass('is_active');
 })

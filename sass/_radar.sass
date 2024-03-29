@@ -1,0 +1,52 @@
+.radar
+    position: relative
+    top: 0
+    left: 0
+    width: 100px
+    height: 100px
+    background-size: cover
+    background-repeat: no-repeat
+    background-postion: center center
+    // background-color: blue
+
+.circle-wave
+    position: absolute
+    z-index: 100
+    width: 0px
+    height: 0px
+    top: 50%
+    left: 50%
+    border: 7px solid $red
+    opacity: 0
+    border-radius: 50%
+    animation: pulse 3s infinite
+    animation-timing-function: ease-in
+    transform: translate(-50%, -50%)
+
+.c2
+    animation-delay: .5s
+
+.c3
+    animation-delay: 1s
+
+.c4
+    animation-delay: 1.5s
+
+.c5
+    animation-delay: 2s
+
+@keyframes pulse
+    0%
+        width: 0px
+        height: 0px
+        opacity: 0
+
+    20%
+        opacity: 1
+
+    100%
+        border-width: 6px
+        border-color: rgba(250, 164, 40, 1)
+        width: 110%
+        height: 110%
+        opacity: 0

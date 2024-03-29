@@ -4,6 +4,7 @@
 @import 'slick'
 @import 'header'
 @import 'footer'
+@import 'radar'
 
 .main
     background-image: url('../img/curve.svg'), url('../img/main-bg.svg')
@@ -25,11 +26,16 @@
 
     &-slide
         overflow: hidden
+        display: none
         .container
+            width: calc( 100vw - 260px )
             min-height: 600px
             height: calc( 100vh - 80px )
-            padding-top: 72px
+            padding: 72px 0 0
             max-height: 790px
+
+        &:first-child
+            display: block
 
     .slick
         &-active
@@ -60,7 +66,7 @@
 
     &-item
         display: block
-        max-width: 32%
+        max-width: 37%
         text-align: center
 
         &__img
@@ -76,9 +82,27 @@
             font-size: 28px
             line-height: 36.4px
 
+    .slick-current
+
+    .slick-slide,
+    .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+        .h1, .main__text, .btn, .main__box, .main-wrap
+            animation: none
+            transform: translateY(100px)
+            opacity: 0
+
+    .slick-center,
+    .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+        .h1, .main__text, .btn, .main__box, .main-wrap
+            animation: fUp 1s ease forwards
+        .main__text, .main__box
+            animation-delay: .2s
+        .btn, .main-wrap
+            animation-delay: .4s
+
     @media screen and ( max-width: 1600px )
         .h1
-            max-width: 67%
+            max-width: 862px
 
         &__text
             font-size: 26px
@@ -88,8 +112,11 @@
 
         &-slide
             .container
-                padding-top: 56px
+                width: calc( 100vw - 160px )
+                // max-width: 1366px
+                padding: 56px 0 0
                 height: calc( 100vh - 76px )
+                max-height: 600px
 
         &-wrap
             max-width: 50%
@@ -128,12 +155,17 @@
                 font-size: 17px
                 line-height: 22px
 
+        &__box
+            left: -14%
+            max-width: 58%
+
     @media screen and ( max-width: 970px )
         background-size: 1370px auto, cover
         background-position: left -335px bottom -54px, center center
         &-slide
             .container
-                padding-top: 32px
+                width: 100vw
+                padding: 32px 16px
                 padding-bottom: 60.933vw
                 min-height: unset
 
@@ -190,9 +222,17 @@
             z-index: -1
             left: -10%
 
+@keyframes fUp
+    0%
+        transform: translateY(100px)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
+
 @keyframes cat
     0%
-        transform: translateY(-10%)
+        transform: translateY(-80px)
     100%
         transform: translateY(10%)
 
@@ -225,12 +265,13 @@
         position: absolute
         bottom: 14%
         max-width: 15vw
-        left: 55%
+        left: 53%
         display: block
         z-index: -1
         animation: cat 3s linear infinite alternate
 
     .btn
+        margin-right: 4%
         img
             top: 0
 
@@ -261,7 +302,9 @@
                 font-size: 22px
                 gap: 16px
                 margin-bottom: 20px
-            img
+
+            .radar
+                height: 80px
                 width: 80px
 
     @media screen and ( max-width: 970px )
@@ -300,8 +343,9 @@
                 max-width: 59.4vw
                 margin: 0 auto 2.5vw
 
-            img
+            .radar
                 width: 13.75vw
+                height: 13.75vw
 
 .virus
     .col
@@ -476,6 +520,10 @@
             &__title
                 font-size: 20px
 
+        &-for
+            width: 300px
+            max-width: 30%
+
         &__btn
             margin-top: 50px
 
@@ -514,6 +562,7 @@
 
         &-for
             width: 100%
+            max-width: 100%
             margin-bottom: 9.063vw
             &:last-child
                 margin-bottom: 0
